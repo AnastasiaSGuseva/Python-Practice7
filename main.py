@@ -7,12 +7,15 @@
 5 Выход из программы (программа должна работать, пока пользователь сам не выйдет из неё)
 
 '''
+
+
 import viewer
 import add
 import importation
 import checker
 import export
 import logger
+
 
 def main_menu():
     print('Выберите действие: ')
@@ -22,7 +25,7 @@ def main_menu():
     print('Нажмите 4 для импорта файла.')
     print('Нажмите 5 для выхода из программы.')
     choice = input('Ваш выбор: ')
-    choice = checker.check_choise(choice)
+    choice = checker.check_choice(choice)
     logger.log('Выбор в главном меню', choice)
     if choice == 1:
         print('Для просмотра записей в формате\n\
@@ -35,7 +38,7 @@ def main_menu():
                 <Фамилия>, <Имя>, <Телефон>, <Описание>\n\
                 нажмите 2')
         choice1 = input()
-        choice1 = checker.check_choise_in_add(choice1)
+        choice1 = checker.check_choice_in_add(choice1)
         logger.log('Выбор формата просмотра записи', choice1)
         if choice1 == 1:
             viewer.view_notes2()
@@ -57,7 +60,7 @@ def main_menu():
                 <Фамилия>, <Имя>, <Телефон>, <Описание>\n\
                 нажмите 2')
         choice3 = input()
-        choice3 = checker.check_choise_in_add(choice3)
+        choice3 = checker.check_choice_in_add(choice3)
         logger.log('Выбор формата экспорта записей', choice3)
         if choice3 == 1:
             export.export_file2()
@@ -75,7 +78,7 @@ def main_menu():
                 <Фамилия>, <Имя>, <Телефон>, <Описание>\n\
                 нажмите 2')
         choice4 = input()
-        choice4 = checker.check_choise_in_add(choice4)
+        choice4 = checker.check_choice_in_add(choice4)
         logger.log('Выбор формата импорта записей', choice4)
         if choice4 == 1:
             importation.import_file()
@@ -84,5 +87,6 @@ def main_menu():
         main_menu()
     if choice == 5:
         return print('Всего хорошего!')
+
 
 main_menu()

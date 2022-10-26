@@ -1,4 +1,4 @@
-def check_choise(ch):
+def check_choice(ch):
     while not ch.isdigit():
         ch = input('Введите число: ')
     else:
@@ -7,7 +7,8 @@ def check_choise(ch):
         else:
             return int(ch)
 
-def check_choise_in_add(ch):
+
+def check_choice_in_add(ch):
     while not ch.isdigit():
         ch = input('Введите число: ')
     else:
