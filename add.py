@@ -6,7 +6,7 @@ def add_note():
     surname = input('Введите фамилию: ')
     name = input('Введите имя: ')
     number = input('Введите номер: ')
-    description = input('Введите описание: ')
+    description = input('Введите описание (без пробелов): ')
     list1 = [surname, name, number, description]
     logger.log('Добавление записи', list1)
 
